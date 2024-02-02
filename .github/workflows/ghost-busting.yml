@@ -9,8 +9,8 @@ on:
     branches:
       - main
     paths:
-      - "pke"
-      - ".github/workflows"
+      - "pke/*"
+      - ".github/workflows/*"
 
 jobs:
   setup-and-run-bot:
@@ -29,7 +29,6 @@ jobs:
 
       - name: List directory structure
         run: ls -la
-        working-directory: pke
 
       - name: Install Poetry
         run: curl -sSL https://install.python-poetry.org | python -
