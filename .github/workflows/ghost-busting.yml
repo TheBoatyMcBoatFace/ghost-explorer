@@ -1,0 +1,58 @@
+name: Find Ghosts
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - "pke"
+
+jobs:
+  setup-and-run-bot:
+    name: Ghost Busting
+    runs-on: ubuntu-latest
+    outputs:
+      data-changed: ${{ steps.verify-changed-files.outputs.files_changed }}
+    steps:
+      - name: Checkout Local Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install Poetry
+        run: curl -sSL https://install.python-poetry.org | python -
+        working-directory: pke
+
+      - name: Run PKE
+        run: |
+          poetry install
+          poetry run python -m run
+        working-directory: pke
+        env:
+          WHERE_GHOSTS_COME_FROM: ${{ secrets.WHERE_GHOSTS_COME_FROM }}
+
+      - name: Verify Changed files
+        id: verify-changed-files
+        uses: tj-actions/verify-changed-files@v16
+        with:
+          files: |
+            data/**
+
+      - name: Commit and Push Changes
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Updated Ghosts
+          branch: main
+          file_pattern: output/*
+        env:
+          GIT_USER_NAME: ${{ secrets.USER_NAME }}
+          GIT_USER_EMAIL: ${{ secrets.USER_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
