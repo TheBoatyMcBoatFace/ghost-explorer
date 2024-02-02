@@ -33,7 +33,7 @@ jobs:
       - name: Run PKE
         run: |
           poetry install
-          poetry run python -m run
+          poetry run python3 -m run
         working-directory: pke
         env:
           WHERE_GHOSTS_COME_FROM: ${{ secrets.WHERE_GHOSTS_COME_FROM }}
