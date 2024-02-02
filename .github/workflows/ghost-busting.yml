@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - "pke/"
+      - "pke"
       - ".github/workflows/"
 
 jobs:

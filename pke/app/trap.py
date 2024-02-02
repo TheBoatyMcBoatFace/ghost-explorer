@@ -6,7 +6,7 @@ import aiohttp
 from .ecu_transfer import write_to_csv
 
 async def fetch_page(session, page_number, category):
-    print(f"Attempting to fetch URL: {url}")
+    url = os.getenv('WHERE_GHOSTS_COME_FROM', 'default_url_if_not_set')
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0',
         'content-type': 'application/x-www-form-urlencoded',
