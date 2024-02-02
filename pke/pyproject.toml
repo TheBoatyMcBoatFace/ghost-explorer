@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pke"
+version = "0.1.0"
+description = "The PKE (Psychokinetic Energy Meter) Finds blogs from Ghost Explore"
+authors = ["TheBoatyMcBoatFace"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyppeteer = "^1.0.2"
+aiohttp = "^3.9.3"
+pyyaml = "^6.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,166 @@
+# pke/config.yml
+
+url: https://ghost.org/explore/
+load_wait: 0.5 # how many seconds to wait for the page to load
+
+schema:
+    - title
+    - site_url
+    - description
+    - publication_icon
+    - nsfw
+    - categories
+    - member_count
+    - show_member_count
+    - mrr
+    - show_mrr
+    - ghost_rank
+    - featured
+    - feature_image
+    - text_color
+    - bg_color
+    - accent_color
+    - lang
+    - created_at
+    - mrr_members_rank
+    - mrr_members_diff_rank
+    - updated_at
+    - showIframe
+    - objectID
+
+categories:
+    - name: Technology
+      slug: technology
+      enable: true
+
+    - name: Art
+      slug: art
+      enable: true
+
+    - name: Culture
+      slug: culture
+      enable: true
+
+    - name: Politics
+      slug: politics
+      enable: true
+
+    - name: Business
+      slug: business
+      enable: true
+
+    - name: Education
+      slug: education
+      enable: true
+
+    - name: Finance
+      slug: finance
+      enable: true
+
+    - name: News
+      slug: news
+      enable: true
+
+    - name: Productivity
+      slug: productivity
+      enable: true
+
+    - name: Developers
+      slug: developers
+      enable: true
+
+    - name: Food & Drink
+      slug: food
+      enable: true
+
+    - name: Podcasts
+      slug: podcasts
+      enable: true
+
+    - name: Sport & Fitness
+      slug: sport
+      enable: true
+
+    - name: Youtubers
+      slug: youtubers
+      enable: true
+
+    - name: Faith & Spirituality
+      slug: faith
+      enable: true
+
+    - name: Music
+      slug: music
+      enable: true
+
+    - name: Crypto
+      slug: crypto
+      enable: true
+
+    - name: Climate
+      slug: climate
+      enable: true
+
+    - name: Science
+      slug: science
+      enable: true
+
+    - name: Health & Wellness
+      slug: health
+      enable: true
+
+    - name: Literature
+      slug: literature
+      enable: true
+
+    - name: Fiction
+      slug: fiction
+      enable: true
+
+    - name: Personal
+      slug: personal
+      enable: true
+
+    - name: Parenting
+      slug: parenting
+      enable: true
+
+    - name: Travel
+      slug: travel
+      enable: true
+
+    - name: Philosophy
+      slug: philosophy
+      enable: true
+
+    - name: History
+      slug: history
+      enable: true
+
+    - name: Entertainment
+      slug: entertainment
+      enable: true
+
+    - name: Fashion & Beauty
+      slug: fashion
+      enable: true
+
+    - name: Gaming
+      slug: gaming
+      enable: true
+
+    - name: Photography
+      slug: photography
+      enable: true
+
+    - name: Gear & Gadgets
+      slug: gear
+      enable: true
+
+    - name: Nature & Outdoors
+      slug: nature
+      enable: true
+
+    - name: House & Home
+      slug: house
+      enable: true
