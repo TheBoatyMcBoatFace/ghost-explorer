@@ -27,6 +27,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Chromium
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+
       - name: List directory structure
         run: ls -la
 
