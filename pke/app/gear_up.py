@@ -23,9 +23,10 @@ async def init_web_driver():
     """
     Initializes Pyppeteer web driver for asynchronous web scraping.
     """
+    async def init_web_driver():
     print("🖥️ Initializing WebDriver...")
     try:
-        browser = await launch(headless=True, dumpio=True)
+        browser = await launch(headless=True, args=['--disable-gpu', '--no-sandbox', '--disable-setuid-sandbox'])
         page = await browser.newPage()
         print("🚀 WebDriver Initialized.")
     except Exception as e:
