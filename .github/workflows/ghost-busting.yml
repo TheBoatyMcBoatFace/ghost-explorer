@@ -33,15 +33,11 @@ jobs:
           sudo apt-get install -y chromium-browser
         working-directory: pke
 
-      - name: List directory structure
-        run: ls -la
+      - name: Verify Chromium Installation
+        run: chromium-browser --version
 
       - name: Install Poetry
         run: curl -sSL https://install.python-poetry.org | python -
-        working-directory: pke
-
-      - name: List directory structure
-        run: ls -la
         working-directory: pke
 
       - name: Run PKE

@@ -23,10 +23,10 @@ async def init_web_driver():
     """
     Initializes Pyppeteer web driver for asynchronous web scraping.
     """
-    async def init_web_driver():
     print("🖥️ Initializing WebDriver...")
     try:
-        browser = await launch(headless=True, args=['--disable-gpu', '--no-sandbox', '--disable-setuid-sandbox'])
+        # Update the executable path according to the actual location
+        browser = await launch(headless=True, executablePath='/usr/bin/chromium-browser', args=['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu'])
         page = await browser.newPage()
         print("🚀 WebDriver Initialized.")
     except Exception as e:
