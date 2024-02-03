@@ -71,4 +71,4 @@ jobs:
         env:
           GIT_USER_NAME: ${{ secrets.USER_NAME }}
           GIT_USER_EMAIL: ${{ secrets.USER_EMAIL }}
-          GITHUB_TOKEN: ${{ secrets.USER_fTOKEN }}
+          GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
